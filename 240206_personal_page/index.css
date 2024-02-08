@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: rgb(189, 189, 189);
+}
+
+ul {
+  list-style: none;
+}
+
+/* 헤더 */
+nav {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.63);
+  position: fixed;
+  z-index: 2;
+}
+.mainMenu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.fa-apple {
+  font-size: 20px;
+}
+header a:hover {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128);
+  animation-name: dropDown;
+  animation-duration: 500ms;
+}
+
+/* 서브메뉴 */
+.subMenu {
+  display: none;
+}
+
+.menuBt:hover .subMenu1 {
+  display: block;
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: rgba(0, 0, 0, 0.76);
+  box-shadow: 5px 5px 5px rgb(128, 128, 128);
+  animation-name: dropDown;
+  animation-duration: 500ms;
+  z-index: 2;
+}
+header ul {
+  margin-right: 100px;
+  line-height: 50px;
+}
+
+header li {
+  margin-bottom: -10px;
+}
+.subMenu span {
+  font-size: 12px;
+  color: rgb(189, 189, 189);
+}
+.subMenu a {
+  color: rgb(189, 189, 189);
+}
+.subMenu b {
+  font-size: 20px;
+}
+.subBottom {
+  margin-bottom: -25px;
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 이벤트 배너 */
+.banner {
+  display: flex;
+  width: 300%;
+  height: 60px;
+  background-color: white;
+  margin-top: 50px;
+}
+
+.banner p {
+  background-color: white;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  animation: slide 7s infinite ease-in-out;
+  z-index: 1;
+}
+.banner a,
+sup {
+  background-color: white;
+  color: rgb(54, 148, 255);
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  50% {
+    left: -32%;
+  }
+  to {
+    left: -66.5%;
+  }
+}
+
+/* 메인 시작 */
+main {
+  text-align: center;
+}
+
+/* 박스 1, 2 */
+.box1,
+.box2 {
+  background: url(images/iphon15pro.jpg);
+  height: 800px;
+  width: 1000px;
+  background-repeat: no-repeat;
+  background-size: 100% 800px;
+}
+.box2 {
+  background: url(images/edition.jpg);
+  background-size: cover;
+  background-position-y: -100px;
+  margin-bottom: 20px;
+  margin-top: -80px;
+}
+.box1,
+.box2 {
+  color: white;
+  padding-top: 100px;
+}
+.box1 h2,
+.box2 h2 {
+  font-size: 50px;
+}
+.box1 p,
+.box2 p {
+  font-size: 27px;
+  margin: 20px 0;
+}
+.box1 span,
+.box1 a {
+  color: #3694ff;
+  font-size: 18px;
+}
+.box2 span,
+.box2 a {
+  color: white;
+  font-size: 18px;
+}
+span {
+  margin-right: 20px;
+}
+
+/* 박스 3 */
+.box3 {
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-column-gap: 0;
+  margin-left: 10px;
+}
+.box3_0 {
+  height: 500px;
+  width: 480px;
+  padding-top: 30px;
+  border-radius: 30px;
+}
+.box3_0:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
+  box-shadow: 6px 6px 6px rgba(128, 128, 128, 0.445);
+  border-radius: 30%;
+}
+main a:hover {
+  text-decoration: underline;
+}
+.box3_0 h3 {
+  font-size: 30px;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+.box3_0 p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+.box3_0 a,
+.box3_0 span {
+  color: #3694ff;
+  font-weight: bold;
+  text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+.box3_1 {
+  background: url(images/phone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box3_2 {
+  background: url(images/Apples-Valentines-Day-sale.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -260px;
+}
+.box3_3 {
+  background: url(images/uiv.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -40px;
+}
+.box3_4 {
+  background: url(images/smarter.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box3_4 h3,
+.box3_4 p,
+.box3_4 a,
+.box3_4 span {
+  text-shadow: none;
+  color: white;
+}
+.box3_4 a,
+.box3_4 span {
+  color: #3694ff;
+}
+.box3_5 {
+  background: url(images/macbook.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -60px;
+}
+.box3_6 {
+  background: url(images/2phone.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 메인 끝 */
+
+/* 푸터 */
+footer {
+  margin-top: 40px;
+  color: rgb(180, 180, 180);
+}
+.footList {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 12px;
+  border-top: 1px solid #ffffff5e;
+}
+.footList ul {
+  line-height: 10px;
+  margin-top: 20px;
+}
+.footList li {
+  line-height: 30px;
+  color: rgb(173, 173, 173);
+}
+.footList a:hover {
+  text-decoration: underline;
+}
+.footList a {
+  color: rgb(228, 228, 228);
+}
+
+.last {
+  font-size: 12px;
+  margin: 0 30px;
+}
+.last a {
+  color: rgb(32, 154, 253);
+}
+.last a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
+@media screen and (min-width: 1000px) {
+  .whole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

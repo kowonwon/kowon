@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-x: hidden;
+  background-color: rgb(245 245 247);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: rgb(58, 58, 58);
+}
+
+ul {
+  list-style: none;
+}
+
+/* 헤더 */
+nav {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.mainMenu {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.fa-apple {
+  font-size: 20px;
+}
+header a:hover {
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(128, 128, 128, 0.5);
+  animation-name: dropDown;
+  animation-duration: 500ms;
+}
+
+/* 서브메뉴 */
+.subMenu {
+  display: none;
+}
+
+.menuBt:hover .subMenu1 {
+  display: block;
+  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background-color: rgb(245 245 247);
+  box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.582);
+  animation-name: dropDown;
+  animation-duration: 500ms;
+  z-index: 2;
+}
+header ul {
+  margin-right: 100px;
+  line-height: 50px;
+}
+
+header li {
+  margin-bottom: -10px;
+}
+.subMenu span {
+  font-size: 12px;
+  color: gray;
+}
+.subMenu a {
+  color: black;
+}
+.subMenu b {
+  font-size: 20px;
+}
+.subBottom {
+  margin-bottom: -25px;
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 이벤트 배너 */
+.banner {
+  display: flex;
+  width: 300%;
+  height: 60px;
+  background-color: white;
+}
+
+.banner p {
+  background-color: white;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+  animation: slide 7s infinite ease-in-out;
+}
+.banner a,
+sup {
+  background-color: white;
+  color: #3694ff;
+}
+
+@keyframes slide {
+  from {
+    left: 0;
+  }
+  50% {
+    left: -32%;
+  }
+  to {
+    left: -66.5%;
+  }
+}
+
+/* 메인 */
+
+main {
+  margin: 0 20px;
+}
+main a {
+  color: rgb(54, 148, 255);
+}
+main a:hover {
+  text-decoration: underline;
+}
+
+/* 박스1 */
+.box1 {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0;
+}
+.box_store {
+  display: flex;
+  justify-content: space-between;
+}
+.box_store > p {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(82, 82, 82);
+}
+.box_store span {
+  color: black;
+}
+
+.box_shopping,
+.box_visit {
+  display: flex;
+}
+.link p {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.appleple {
+  font-size: 30px;
+  margin: 0 10px;
+  line-height: 40px;
+}
+.link {
+  margin: 20px;
+}
+
+.box-item {
+  display: flex;
+  justify-content: space-around;
+}
+
+.items {
+  text-align: center;
+  cursor: pointer;
+}
+.items img {
+  width: 100px;
+}
+.items:hover {
+  opacity: 0.7;
+}
+
+/* 박스2 */
+.box2 p {
+  font-size: 25px;
+  margin-top: 50px;
+}
+
+.blocks {
+  display: flex;
+  justify-content: space-between;
+  width: 1655px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+.blocks div {
+  width: 400px;
+  height: 500px;
+  border-radius: 5%;
+  cursor: pointer;
+  box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.185);
+}
+.blocks div:hover {
+  transform: scale(1.02);
+  transition: all 0.5s;
+  box-shadow: 6px 6px 6px rgba(128, 128, 128, 0.445);
+}
+
+.blocks p {
+  color: white;
+  font-size: 15px;
+  margin: 30px;
+}
+.blocks strong {
+  font-size: 28px;
+  margin: 20px 0;
+}
+.blocks span {
+  font-size: 20px;
+}
+.univ p {
+  color: black;
+}
+.univ span {
+  font-size: 17px;
+}
+.edition strong {
+  margin-left: -10px;
+}
+
+.titanium {
+  background: url(/240206_personal_page/images/iphon15pro.jpg);
+}
+.univ {
+  background: url(/240206_personal_page/images/uiv.jpg);
+}
+.edition {
+  background: url(/240206_personal_page/images/edition.jpg);
+}
+.smarter {
+  background: url(/240206_personal_page/images/smarter.jpg);
+}
+
+/* 푸터 */
+footer {
+  margin-top: 40px;
+}
+.footList {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 12px;
+  border-top: 1px solid #8080805e;
+}
+.footList ul {
+  line-height: 10px;
+  margin-top: 20px;
+}
+.footList li {
+  line-height: 30px;
+}
+.footList a:hover {
+  text-decoration: underline;
+}
+
+.last {
+  font-size: 12px;
+  margin: 0 30px;
+}
+.last a {
+  color: rgb(19, 126, 214);
+}
+.last a:hover {
+  text-decoration: underline;
+}
+
+/* 반응형 */
+@media screen and (min-width: 1700px) {
+  body {
+    align-items: center;
+  }
+}
+/* 반응형 */
+@media screen and (min-width: 1000px) {
+  .whole {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
